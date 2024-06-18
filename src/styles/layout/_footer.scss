@@ -1,0 +1,50 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  
+  .info {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: $color-grey-dark;
+    color: $color-white;
+    padding: 12rem 0 5rem;
+
+    .address,
+    .hours,
+    .phone {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      strong {
+        text-transform: uppercase;
+        font-size: 2rem;
+      }
+
+      img {
+        filter: invert(1);
+        width: 5rem;
+        height: auto;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  .attribution {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    color: $color-white;
+    background-color: $color-primary;
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  @include respond(phone) {
+    align-items: center;
+    flex-direction: row;
+  }
+}
