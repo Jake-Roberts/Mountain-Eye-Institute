@@ -1,35 +1,30 @@
 import Image from "next/image";
-import '../app/styles/index.scss'
-import GoogleMap from "../app/components/GoogleMap";
-import Gallery from "@/app/components/Gallery";
-import DOP from "@/app/components/DOP";
-import ContactUs from "@/app/components/Forms/ContactForm";
-import NavBar from "./components/NavBar";
+import '../styles/index.css'
+import Gallery from "@/components/Gallery";
+import DOP from "@/components/DOP";
+import TopNav from "@/components/TopNav";
+import Footer from "@/components/Footer";
+import ContactCTA from "@/components/ContactCTA";
 
 const Home = () => {
 
   const galleryItems = [
-    {image:'/mountain3.jpg', title: 'Eye1', description: 'Close up of a blue eye'  },
-    {image:'/mountain2.jpg', title: 'Moutain', description: 'View of Mountain'  },
-    {image:'/mountain1.jpg', title: 'Moutain', description: 'View of zion'  },
+    {image:'/gallery/mountain6.webp', title: 'Mountain', description: 'A mountain for sure'  },
+    {image:'/gallery/mountain5.webp', title: 'Mountain', description: 'A mountain for sure'  },
+    {image:'/gallery/mountain4.webp', title: 'Mountain', description: 'A very nice mountain'  },
+    {image:'/gallery/mountain3.webp', title: 'Mountain', description: 'Close up of a blue eye'  },
+    {image:'/gallery/mountain2.webp', title: 'Mountain', description: 'View of Mountain'  },
+    {image:'/gallery/mountain1.webp', title: 'Mountain', description: 'View of zion'  },
   ]
-  // only files in app have access to server-side environment variables
-  // for that reason we must pass the .env.local keys as props from here
-  const props = {
-    apiKey: process.env.GOOGLE_MAPS_API_KEY,
-    mapId: process.env.MAP_ID
-  }
 
   return (
-    <>
-    <header><NavBar /></header>
-    <main className="main">  
+    <main className="main">
+      <TopNav />
       <Gallery items={galleryItems} />
-      <section id="googlemap"><GoogleMap {...props}/></section>
-      <section id="dop"><DOP /></section> 
-      <section id="contact"><ContactUs /></section>
+      <DOP />
+      <ContactCTA />
+      <Footer />
     </main>
-    </>
   );
 }
 
