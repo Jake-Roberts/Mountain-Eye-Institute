@@ -1,11 +1,57 @@
 .galleryContainer {
+  position: relative;
+  width: 100%;
+  height: 75vh;
+  overflow: hidden;
+
+  .thumbnails {
     position: relative;
+    height: 100%;
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    
-    .thumbnails {
-        position: relative;
+
+    .thumbnail {
+      position: absolute;
+      overflow: hidden;
+      transition: all 0.5s ease-in-out;
+
+      &.index2 {
+        right: -50%;
+        bottom: 5%;
+        z-index: 0;
+        display: none;
+      }
+
+      &.index3 {
+        right: -20%;
+        bottom: 5%;
+        z-index: 0;
+      }
+
+      &.index4 {
+        right: 5rem;
+        bottom: 5%;
+        z-index: 3;
+      }
+
+      &.index5 {
+        right: 30rem;
+        bottom: 5%;
+        z-index: 2;
+      }
+    }
+
+    .index0 {
+      bottom: 0;
+      right: 0;
+      height: 100%;
+      width: 100vw;
+      z-index: -1;
+      border-radius: 0%;
+
+      img {
+        object-fit: cover;
         height: 100%;
         width: 100%;
         padding: 5rem;
@@ -73,16 +119,18 @@
                 width: 100%;
             }
         }
+      }
     }
+  }
 
-    .next {
-        @include center;
-        bottom: 3rem;
-        background-color: white;
-        padding: 2rem;
-        color: black;
-        font-size: 2rem;
-        cursor: pointer;
-        z-index: 10;
-    }
+  .next {
+    @include center;
+    bottom: 3rem;
+    background-color: white;
+    padding: 2rem;
+    color: black;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10;
+  }
 }

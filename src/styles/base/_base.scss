@@ -90,42 +90,48 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+
+  &.btn {
+    padding: 1rem 2rem;
+    border-radius: 0.3rem;
+    box-shadow: $default-box-shadow;
+    background-color: $color-primary;
+    color: $color-white;
+    font-weight: 700;
+    border: 0.2rem solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      border: 0.2rem solid $color-primary;
+      color: $color-primary;
+      background-color: transparent;
+      box-shadow: $box-shadow-hover;
+    }
+
+    &-light {
+      &:hover {
+        background-color: $color-white;
+      }
+    }
+  }
 }
 
-// a {
-//   color: $color-black;
+button {
+  background-color: $color-primary;
+  border: none;
+  border-radius: 0.2rem;
+  box-shadow: $default-box-shadow;
+  color: $color-white;
+  cursor: pointer;
+  font-size: 2rem;
+  transition: all 0.2s ease;
 
-//   &.btn {
-//     border: none;
-//     border-radius: 0.2rem;
-//     box-shadow: $default-box-shadow;
-//     background-color: $color-primary;
-//     color: $color-white;
-//     cursor: pointer;
-//     transition: all 0.2s ease;
-
-//     &:hover {
-//       color: $color-grey-xtra-dark;
-//       box-shadow: $box-shadow-hover;
-//     }
-//   }
-// }
-
-// button {
-//   background-color: $color-primary;
-//   border: none;
-//   border-radius: 0.2rem;
-//   box-shadow: $default-box-shadow;
-//   color: $color-white;
-//   cursor: pointer;
-//   font-size: 2rem;
-//   transition: all 0.2s ease;
-
-//   &:hover {
-//     color: $color-grey-xtra-dark;
-//     box-shadow: $box-shadow-hover;
-//   }
-// }
+  &:hover {
+    color: $color-grey-dark;
+    box-shadow: $box-shadow-hover;
+  }
+}
 
 // img {
 //   box-shadow: $box-shadow-hover;

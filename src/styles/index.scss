@@ -4,11 +4,14 @@
 @import "base/base";
 @import "base/typography";
 
+@import "components/accordionszhsin";
+@import "components/bannerlist";
+@import "components/contactCTA";
+@import "components/contactForm";
 @import "components/dop";
 @import "components/gallery";
 @import "components/gmaps";
-@import "components/contactForm";
-@import "components/contactCTA";
+@import "components/twocolumn";
 
 @import "layout/footer";
 @import "layout/topnav";
