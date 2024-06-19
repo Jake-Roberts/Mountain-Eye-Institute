@@ -3,10 +3,6 @@
   flex-direction: column;
   align-items: center;
 
-  h2 {
-    margin-bottom: 5rem;
-  }
-
   ul {
     width: min(100%, 60rem);
     overflow: hidden;
@@ -75,11 +71,6 @@
         }
       }
     }
-  }
-
-  .btn {
-    margin-top: 2rem;
-    width: fit-content;
   }
 }
 

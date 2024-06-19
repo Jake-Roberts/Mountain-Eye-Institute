@@ -2,6 +2,9 @@ import ContactUs from "@/components/ContactForm";
 import TopNav from "@/components/TopNav";
 import Footer from "@/components/Footer";
 import GoogleMap from "@/components/GoogleMap";
+import GReviewCarousel from "@/components/GReviewCarousel";
+import Image from "next/image";
+import logo from "../../../public/logo.webp";
 
 const Contact = () => {
   // only files in app have access to server-side environment variables
@@ -12,12 +15,20 @@ const Contact = () => {
   };
 
   return (
-    <main className='main'>
+    <>
       <TopNav />
-      <GoogleMap {...props} />
-      <ContactUs />
-      <Footer />
-    </main>
+      <main className='main'>
+        <div className='map-and-review'>
+          <GoogleMap {...props} />
+          <div className='reviews'>
+            <h1>Visit Us!</h1>
+            <GReviewCarousel />
+          </div>
+        </div>
+        <ContactUs />
+      </main>
+      <Footer contact={false} />
+    </>
   );
 };
 

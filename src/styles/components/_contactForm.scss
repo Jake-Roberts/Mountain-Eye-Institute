@@ -1,78 +1,111 @@
-@import '../abstracts/variables';
+.contact {
+  padding: 20px;
+  background-color: #242323;
+  border-radius: $default-border-radius;
+  box-shadow: $default-box-shadow;
+  margin: 20px auto;
+  max-width: 80%;
 
-.contactContainer {
+  h2 {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  &-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 80%;
+    text-align: center;
+
+    p > strong {
+      display: inline;
+    }
+
+    .contact-questions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  .contactContainer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 20px;
-    background-color: #242323;
-    border-radius: $default-border-radius;
-    box-shadow: $default-box-shadow;
-    margin: 20px 0;
 
     @media (max-width: 768px) {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-.ourInfo, .formContainer {
-    flex: 1;
-    padding: 20px;
-
-    h2 {
-        font-size: 4rem;
-        margin-bottom: 20px;
+      flex-direction: column;
+      align-items: center;
     }
 
-    p {
+    .ourInfo,
+    .formContainer {
+      flex: 1;
+      padding: 20px;
+
+      h3 {
+        text-decoration: underline;
+      }
+
+      p {
         font-size: 1.8rem;
         margin-bottom: 10px;
-    }
+      }
 
-    @media (max-width: 768px) {
+      @media (max-width: 768px) {
         width: 100%;
         text-align: center;
+      }
     }
-}
 
-.formContainer {
-    form {
+    .ourInfo {
+      display: flex;
+      gap: 1rem;
+      flex-direction: column;
+    }
+
+    .formContainer {
+      form {
         display: flex;
         flex-direction: column;
 
-        input, textarea {
-            margin-bottom: 10px;
-            padding: 10px;
-            border: 1px solid $color-grey-light;
-            border-radius: $default-border-radius;
-            font-size: 1.5rem;
+        input,
+        textarea {
+          margin-bottom: 10px;
+          padding: 10px;
+          border: 1px solid $color-grey-light;
+          border-radius: $default-border-radius;
+          font-size: 1.5rem;
 
-            &:focus {
-                outline: none;
-                border-color: $color-primary;
-            }
+          &:focus {
+            outline: none;
+            border-color: $color-primary;
+          }
         }
 
         textarea {
-            height: 100px;
-            resize: none;
+          height: 100px;
+          resize: none;
         }
 
         button {
-            padding: 10px 20px;
-            border: none;
-            border-radius: $default-border-radius;
-            background-color: $color-primary;
-            color: $color-white;
-            font-size: 1.8rem;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
+          padding: 10px 20px;
+          border: none;
+          border-radius: $default-border-radius;
+          background-color: $color-primary;
+          color: $color-white;
+          font-size: 1.8rem;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
 
-            &:hover {
-                background-color: $color-primary-dark;
-            }
+          &:hover {
+            background-color: $color-primary-dark;
+          }
         }
+      }
     }
+  }
 }

@@ -1,31 +1,18 @@
 .accordion-szhsin {
-  h1,
-  p {
-    width: 80%;
-    margin: 0 auto;
-  }
-
-  p {
-    margin-bottom: 4rem;
-  }
-
-  .chevron-down {
-    margin-left: auto;
-    transition: transform 0.25s cubic-bezier(0, 0, 0, 1);
-  }
-
   .szh-accordion {
-    border-bottom: 0.2rem solid #ccc;
+    border-bottom: 0.2rem solid $color-primary;
     width: 80%;
     margin: 0 auto;
 
     &__item {
-      border-top: 0.2rem solid #ccc;
+      border-top: 0.2rem solid $color-primary;
 
       &-btn {
         cursor: pointer;
         display: flex;
+        justify-content: space-around;
         align-items: center;
+        height: 8rem;
         width: 100%;
         margin: 0;
         padding: 1rem;
@@ -35,13 +22,49 @@
         color: $color-white;
         background-color: transparent;
         border: none;
+
+        .btn-header {
+          margin-left: 3rem;
+          display: flex;
+          gap: 4rem;
+          align-items: center;
+          img {
+            filter: invert(1);
+          }
+          strong {
+            font-size: 3rem;
+          }
+        }
+
+        .chevron-down {
+          filter: invert(1);
+          margin-left: auto;
+          transition: transform 0.25s cubic-bezier(0, 0, 0, 1);
+        }
+
         &:hover {
           background-color: #f3f3f3;
+          color: $color-primary;
+
+          img {
+            filter: invert(0);
+          }
         }
       }
 
       &-content {
         transition: height 0.25s cubic-bezier(0, 0, 0, 1);
+
+        .btn-details {
+          ul {
+            margin-left: 2rem;
+          }
+
+          strong {
+            width: fit-content;
+            margin: 0;
+          }
+        }
       }
 
       &-panel {
@@ -51,9 +74,22 @@
       &--expanded {
         .szh-accordion__item-btn {
           background-color: #e7e7e7;
-        }
-        .chevron-down {
-          transform: rotate(180deg);
+          color: $color-primary;
+
+          .btn-header {
+            img {
+              filter: invert(0);
+            }
+          }
+
+          .chevron-down {
+            transform: rotate(180deg);
+            filter: invert(0);
+          }
+
+          &:hover {
+            color: $color-primary-light;
+          }
         }
       }
     }

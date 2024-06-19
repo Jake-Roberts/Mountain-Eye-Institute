@@ -1,0 +1,42 @@
+.three-column-info {
+  display: flex;
+  justify-content: space-around;
+  background-color: $color-grey-dark;
+  color: $color-white;
+  // following line for use in conjuction with Contact CTA
+  // padding: 12rem 0 5rem;
+  padding: 5rem 0;
+  width: 100%;
+
+  &.component {
+    margin-bottom: 0rem;
+  }
+
+  .address,
+  .hours,
+  .phone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 30%;
+
+    strong {
+      text-transform: uppercase;
+      font-size: 2rem;
+    }
+
+    .content {
+      span {
+        display: block;
+      }
+    }
+
+    img {
+      filter: invert(1);
+      width: 5rem;
+      height: auto;
+      margin-bottom: 2rem;
+    }
+  }
+}
