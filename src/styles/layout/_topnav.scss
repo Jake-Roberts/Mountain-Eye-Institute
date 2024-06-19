@@ -1,6 +1,5 @@
 header {
-  position: relative;
-  display: block;
+  display: inline;
   width: 100vw;
 
   .infobar {
@@ -8,7 +7,7 @@ header {
     display: flex;
     justify-content: flex-end;
     gap: 4rem;
-    padding: 0 5rem;
+    padding: 0 15%;
   }
 
   .topnav {
@@ -23,12 +22,19 @@ header {
     color: $color-grey;
     z-index: 100;
 
-    img {
+    a {
       margin: 1rem;
       box-shadow: none;
       width: 20%;
       height: auto;
       object-fit: cover;
+      margin: 0;
+      padding: 0;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
     }
 
     .navlinks {
@@ -37,6 +43,7 @@ header {
       flex-wrap: wrap;
       align-items: center;
       width: 50%;
+      text-align: center;
 
       a {
         text-decoration: none;
@@ -59,6 +66,7 @@ header {
       border-radius: 2.5rem;
       padding: 1.2rem;
       text-decoration: none;
+      max-width: fit-content;
     }
   }
 }

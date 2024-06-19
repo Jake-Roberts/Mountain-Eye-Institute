@@ -1,0 +1,28 @@
+.main {
+  .googlemap {
+    height: 40rem;
+    width: 40%;
+    margin: 5rem 0;
+  }
+
+  .map-and-review {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+
+    .reviews {
+      display: flex;
+      flex-direction: column;
+      width: 45%;
+    }
+  }
+
+  .contact-details {
+    padding: 2rem;
+    margin: 0 auto;
+    background-color: rgba($color: $color-white, $alpha: 0.2);
+    color: $color-white;
+  }
+}

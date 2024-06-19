@@ -19,8 +19,7 @@ interface People {
   bio: string;
 }
 
-const DOP = () => {
-  const [type, setType] = useState("square");
+const DOP = ({ type }: { type: string }) => {
   const [open, setOpen] = useState("modal");
   const [modalPerson, setModalPerson] = useState(0);
   const modalRef = useRef<HTMLDivElement>();

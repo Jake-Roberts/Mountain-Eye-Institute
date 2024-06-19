@@ -1,0 +1,18 @@
+.treatments {
+  h1,
+  strong {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  h1 {
+    margin-top: 6rem;
+  }
+
+  h2,
+  h2 + strong {
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+  }
+}
