@@ -53,7 +53,7 @@ const AccordionSzhsin = () => {
   );
 
   return (
-    <>
+    <section className='accordion-szhsin component'>
       <h1>Treatments</h1>
       <p>Learn more about the treatments offered at Mountain Eye Institute</p>
       <Accordion>
@@ -63,7 +63,7 @@ const AccordionSzhsin = () => {
           </AccordionItem>
         ))}
       </Accordion>
-    </>
+    </section>
   );
 };
 

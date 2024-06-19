@@ -175,30 +175,27 @@ body input {
   font-family: "Varela Round", sans-serif;
 }
 
-h1,
-p {
+.accordion-szhsin h1,
+.accordion-szhsin p {
   width: 80%;
   margin: 0 auto;
 }
-
-p {
+.accordion-szhsin p {
   margin-bottom: 4rem;
 }
-
-.chevron-down {
+.accordion-szhsin .chevron-down {
   margin-left: auto;
   transition: transform 0.25s cubic-bezier(0, 0, 0, 1);
 }
-
-.szh-accordion {
-  border-bottom: 1px solid #ccc;
+.accordion-szhsin .szh-accordion {
+  border-bottom: 0.2rem solid #ccc;
   width: 80%;
   margin: 0 auto;
 }
-.szh-accordion__item {
-  border-top: 1px solid #ccc;
+.accordion-szhsin .szh-accordion__item {
+  border-top: 0.2rem solid #ccc;
 }
-.szh-accordion__item-btn {
+.accordion-szhsin .szh-accordion__item-btn {
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -212,19 +209,19 @@ p {
   background-color: transparent;
   border: none;
 }
-.szh-accordion__item-btn:hover {
+.accordion-szhsin .szh-accordion__item-btn:hover {
   background-color: #f3f3f3;
 }
-.szh-accordion__item-content {
+.accordion-szhsin .szh-accordion__item-content {
   transition: height 0.25s cubic-bezier(0, 0, 0, 1);
 }
-.szh-accordion__item-panel {
+.accordion-szhsin .szh-accordion__item-panel {
   padding: 1rem;
 }
-.szh-accordion__item--expanded .szh-accordion__item-btn {
+.accordion-szhsin .szh-accordion__item--expanded .szh-accordion__item-btn {
   background-color: #e7e7e7;
 }
-.szh-accordion__item--expanded .chevron-down {
+.accordion-szhsin .szh-accordion__item--expanded .chevron-down {
   transform: rotate(180deg);
 }
 
@@ -582,11 +579,6 @@ p {
   height: 100%;
   width: 100%;
   overflow: hidden;
-}
-.galleryContainer .thumbnails .thumbnails {
-  position: relative;
-  height: 100%;
-  width: 100%;
 }
 .galleryContainer .thumbnails .thumbnail {
   position: absolute;
