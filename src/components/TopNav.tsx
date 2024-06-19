@@ -3,7 +3,6 @@ import logo from '../../public/logo.webp'
 
 const TopNav = () => {
 
-
   return (
     <header>
       <div className="infobar">
