@@ -12,8 +12,25 @@
 
     .thumbnail {
       position: absolute;
+      height: 30rem;
+      width: 20rem;
       overflow: hidden;
       transition: all 0.5s ease-in-out;
+
+      img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+      }
+
+      &.index1 {
+        bottom: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -2;
+        border-radius: 0%;
+      }
 
       &.index2 {
         right: -50%;
