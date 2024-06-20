@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 interface GalleryProps {
   items: { image: string; title: string; description: string }[];
@@ -37,11 +37,6 @@ const Gallery = ({ items }: GalleryProps) => {
                 height={1149}
                 width={1920}
               />
-
-              {/* <div className='thumbnailCaption'>
-                                <h4>{item.title}</h4>
-                                <p>{item.description}</p>
-                            </div> */}
             </div>
           );
         })}

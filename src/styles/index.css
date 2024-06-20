@@ -676,12 +676,6 @@ body input {
   z-index: -1;
   border-radius: 0%;
 }
-.galleryContainer .thumbnails .index0 img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 100%;
-  width: 100%;
-}
 .galleryContainer .next {
   position: absolute;
   left: 50%;
