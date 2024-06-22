@@ -6,6 +6,15 @@
   margin: 20px auto;
   max-width: 80%;
 
+  h2,
+  h3,
+  p,
+  a,
+  span,
+  strong {
+    color: $color-white;
+  }
+
   h2 {
     text-align: center;
     margin: 0 auto;
@@ -79,6 +88,7 @@
           border: 1px solid $color-grey-light;
           border-radius: $default-border-radius;
           font-size: 1.5rem;
+          background-color: $color-white;
 
           &:focus {
             outline: none;

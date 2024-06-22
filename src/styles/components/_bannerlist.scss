@@ -22,7 +22,6 @@
         transparent
       );
       transform-style: preserve-3d;
-      color: $color-white;
       padding: 0.5rem 2rem;
 
       display: flex;
@@ -65,6 +64,11 @@
 
       .info {
         text-align: left;
+
+        .title,
+        p {
+          color: $color-white;
+        }
 
         .title {
           font-weight: 700;

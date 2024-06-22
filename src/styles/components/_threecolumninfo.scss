@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-around;
   background-color: $color-grey-dark;
-  color: $color-white;
   // following line for use in conjuction with Contact CTA
   // padding: 12rem 0 5rem;
   padding: 5rem 0;
@@ -20,6 +19,12 @@
     align-items: center;
     text-align: center;
     width: 30%;
+
+    strong,
+    p,
+    span {
+      color: $color-white;
+    }
 
     strong {
       text-transform: uppercase;

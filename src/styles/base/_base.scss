@@ -31,13 +31,14 @@ html {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: inline;
-  background-color: $color-grey-dark;
+  background-color: $color-white;
+}
+
+main {
+  height: fit-content;
 }
 
 h1,
@@ -49,12 +50,14 @@ strong,
 span,
 div {
   display: block;
+  color: $color-black;
 }
 
 a {
   display: block;
   color: inherit;
   text-decoration: none;
+  color: $color-black;
 
   &.btn {
     padding: 1rem 2rem;

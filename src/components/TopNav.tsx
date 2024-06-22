@@ -14,8 +14,8 @@ const TopNav = () => {
           <Image src={logo} alt='company logo' width={535} height={156} />
         </Link>
         <div className='navlinks'>
-          <a href='/about'>About</a>
           <a href='/treatments'>Treatments</a>
+          <a href='/about'>About</a>
           <a href='/contact'>Contact</a>
           <a
             href='files/New-Patient-Form.pdf'
@@ -25,7 +25,11 @@ const TopNav = () => {
             New Patient Form
           </a>
         </div>
-        <a className='contact-btn' href='http://www.mypatientvisit.com/'>
+        <a
+          className='contact-btn'
+          href='http://www.mypatientvisit.com/'
+          target='_blank'
+        >
           Patient Portal
         </a>
       </div>

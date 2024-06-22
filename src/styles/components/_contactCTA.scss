@@ -4,11 +4,14 @@
   justify-content: space-between;
   align-items: center;
   width: 60%;
-  background-color: $color-white;
-  color: black;
+  background-color: $color-grey;
   margin: 0 auto -5rem;
   padding: 5rem 10rem;
   z-index: 1;
+
+  h2 {
+    color: $color-black;
+  }
 
   .btn {
     font-size: 2rem;

@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
+import chevronright from "../../public/chevron-right.svg";
 
 interface GalleryProps {
   items: { image: string; title: string; description: string }[];
@@ -42,7 +43,12 @@ const Gallery = ({ items }: GalleryProps) => {
         })}
       </div>
       <div className='next' onClick={() => next()}>
-        Next
+        <Image
+          src={chevronright}
+          alt='right-pointing chevron'
+          width={50}
+          height={50}
+        />
       </div>
     </div>
   );
