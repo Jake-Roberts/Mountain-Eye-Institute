@@ -25,10 +25,17 @@ const Gallery = ({ items }: GalleryProps) => {
     }); // Match the transition duration
   };
 
+  const activeIndex = classQueue.indexOf("0")
+
   return (
     <div className='galleryContainer'>
+      <div className="activeText">
+        <h2>{items[activeIndex].title}</h2>
+        <p>{items[activeIndex].description}</p>
+      </div>
       <div className='thumbnails'>
         {items.map((item, index) => {
+          const isActive = classQueue[index] === "0";
           return (
             <div key={index} className={`thumbnail index${classQueue[index]}`}>
               <Image
@@ -37,12 +44,20 @@ const Gallery = ({ items }: GalleryProps) => {
                 height={1149}
                 width={1920}
               />
+              <div className={`thumbnailTitle ${isActive ? "hide" : ""}`}>{item.title}</div>
             </div>
           );
         })}
       </div>
-      <div className='next' onClick={() => next()}>
-        Next
+      <div className="navigation">
+        <div className="dots">
+          {items.map((_, index) => (
+            <div key={index} className={`dot ${index === activeIndex ? "active" : ""}`}></div>
+          ))}
+        </div>
+        <div className="arrow" onClick={() => next()}>
+          ➔
+        </div>
       </div>
     </div>
   );

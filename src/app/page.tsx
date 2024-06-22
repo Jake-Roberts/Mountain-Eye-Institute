@@ -11,12 +11,12 @@ const Home = () => {
   const galleryItems = [
     {
       image: "/gallery/mountain6.webp",
-      title: "Mountain",
+      title: "A pretty Mountain",
       description: "A mountain for sure",
     },
     {
       image: "/gallery/mountain5.webp",
-      title: "Mountain",
+      title: " A very pretty Mountain",
       description: "A mountain for sure",
     },
     {
@@ -26,17 +26,17 @@ const Home = () => {
     },
     {
       image: "/gallery/mountain3.webp",
-      title: "Mountain",
+      title: " Ugly Mountain",
       description: "Close up of a blue eye",
     },
     {
       image: "/gallery/mountain2.webp",
-      title: "Mountain",
+      title: "More of a hill than a Mountain",
       description: "View of Mountain",
     },
     {
       image: "/gallery/mountain1.webp",
-      title: "Mountain",
+      title: " Sexy Mountain",
       description: "View of zion",
     },
   ];
