@@ -100,7 +100,7 @@ const Home = () => {
         <DOP type={"round"} />
         <ContactCTA />
       </main>
-      <Footer contact={true} />
+      <Footer contact={true} tall={true} />
     </>
   );
 };

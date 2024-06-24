@@ -4,12 +4,12 @@
   align-items: center;
 
   ul {
-    width: min(100%, 60rem);
+    width: min(100%, 70%);
     overflow: hidden;
     margin-inline: auto;
     padding-inline: clamp(1rem, 5vw, 4rem);
     list-style: none;
-    perspective: 1000px;
+    perspective: 120rem;
     display: grid;
     row-gap: 0.5rem;
 

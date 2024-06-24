@@ -19,7 +19,7 @@ const Contact = () => {
         <TwoColumn header={true} side={"right"} image={headerImage} />
         <ContactCTA />
       </main>
-      <Footer contact={true} />
+      <Footer contact={true} tall={true} />
     </>
   );
 };

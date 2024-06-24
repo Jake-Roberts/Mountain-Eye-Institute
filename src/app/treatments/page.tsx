@@ -46,7 +46,7 @@ const Contact = () => {
         <BannerList items={listItems} />
         <ContactCTA />
       </main>
-      <Footer contact={true} />
+      <Footer contact={true} tall={true} />
     </>
   );
 };
