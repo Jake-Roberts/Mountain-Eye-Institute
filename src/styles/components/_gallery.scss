@@ -53,10 +53,11 @@
         text-align: center;
         padding: 0.5rem 0;
         opacity: 1;
-        transition: opacity 0.5s ease-in-out;
+       
 
         &.hide {
           opacity: 0;
+          display: none;
         }
       }
 
