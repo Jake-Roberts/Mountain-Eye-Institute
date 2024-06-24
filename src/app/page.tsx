@@ -11,33 +11,33 @@ const Home = () => {
   const galleryItems = [
     {
       image: "/gallery/mountain6.webp",
-      title: "A pretty Mountain",
-      description: "A mountain for sure",
+      title: "Welcome to Mountain Eye Institute",
+      description: "Mountain Eye Institute is a comprehensive Ophthalmology practice providing a full range of treatment for eye diseases and specializes in LASIK & other surgical eye care.",
     },
     {
       image: "/gallery/mountain5.webp",
-      title: " A very pretty Mountain",
-      description: "A mountain for sure",
+      title: "Optical Center",
+      description: "Our Certified Optician Joseph has the expertise to provide you with the correct prescription and the correct frames for all ages.",
     },
     {
       image: "/gallery/mountain4.webp",
-      title: "Mountain",
-      description: "A very nice mountain",
+      title: "LASIK or Laser Assisted in-Situ Keratomileusis",
+      description: "First successfully performed in 1989, LASIK stands for Laser Assisted in-Situ Keratomileusis, which when translated means to “shape inside the cornea with a laser.” It is used to treat a wide range of visual distortion.",
     },
     {
       image: "/gallery/mountain3.webp",
-      title: " Ugly Mountain",
-      description: "Close up of a blue eye",
+      title: " Cedar Surgical Associates",
+      description: "Our Southern Utah Surgical Center is located in Cedar City. We specialize in LASIK Surgery and other Surgical Eye Care. Come in for a consultation.",
     },
     {
       image: "/gallery/mountain2.webp",
-      title: "More of a hill than a Mountain",
-      description: "View of Mountain",
+      title: "Glaucoma",
+      description: "Glaucoma is a leading cause of blindness in the United States, especially for older people. ",
     },
     {
       image: "/gallery/mountain1.webp",
-      title: " Sexy Mountain",
-      description: "View of zion",
+      title: " Treatments",
+      description: "Our treatments include, Lasik, Glaucoma, Macular Degeneration, Diabetic Retinopathy, and 'No Stitch' Cataract Surgery. If you would like to learn more about any of these treatments click the button below!",
     },
   ];
 

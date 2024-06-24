@@ -2,6 +2,8 @@
 import Image from "next/image";
 import React, { useState } from "react";
 
+import Link from "next/link";
+
 interface GalleryProps {
   items: { image: string; title: string; description: string }[];
 }
@@ -12,7 +14,7 @@ const Gallery = ({ items }: GalleryProps) => {
     return `${index}`;
   });
   const [classQueue, setClassQueue] = useState(setupQueue);
-
+ 
   const next = () => {
     setIsTransitioning(true);
     const tempArray = classQueue;
@@ -25,13 +27,22 @@ const Gallery = ({ items }: GalleryProps) => {
     }); // Match the transition duration
   };
 
+  
+
   const activeIndex = classQueue.indexOf("0")
+
+  const getLinkHref = (title: string) => {
+    return title === "Welcome to Mountain Eye Institute" ? '/about' : '/treatments';
+  };
 
   return (
     <div className='galleryContainer'>
       <div className="activeText">
         <h2>{items[activeIndex].title}</h2>
         <p>{items[activeIndex].description}</p>
+        <Link href={getLinkHref(items[activeIndex].title)} passHref legacyBehavior>
+          <button className="learnMoreButton">Learn More</button>
+        </Link>
       </div>
       <div className='thumbnails'>
         {items.map((item, index) => {
