@@ -6,7 +6,7 @@ import ContactCTA from "@/components/ContactCTA";
 import TwoColumn from "@/components/TwoColumn";
 import BannerList from "@/components/BannerList";
 import { cataracts, dr, glaucoma, lasik, md } from "../../public/eyes/eyes.js";
-import twoColumnImage from "../../public/gallery/mountain1.webp";
+import twoColumnImage from "../../public/gallery/lasik.webp";
 
 const Home = () => {
   const galleryItems = [

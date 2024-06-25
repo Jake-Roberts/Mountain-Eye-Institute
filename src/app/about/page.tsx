@@ -2,7 +2,7 @@ import ContactCTA from "@/components/ContactCTA";
 import TopNav from "@/components/TopNav";
 import Footer from "@/components/Footer";
 import TwoColumn from "@/components/TwoColumn";
-import headerImage from "../../../public/gallery/mountain1.webp";
+import headerImage from "../../../public/gallery/lasik.webp";
 
 const Contact = () => {
   // only files in app have access to server-side environment variables
