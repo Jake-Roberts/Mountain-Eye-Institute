@@ -7,6 +7,7 @@
   max-width: 80%;
 
   h2 {
+    color: $color-white;
     text-align: center;
     margin: 0 auto;
   }
@@ -17,6 +18,7 @@
     gap: 1rem;
     width: 80%;
     text-align: center;
+    
 
     p > strong {
       display: inline;
@@ -45,6 +47,7 @@
     .formContainer {
       flex: 1;
       padding: 20px;
+      color: $color-white;
 
       h3 {
         text-decoration: underline;
