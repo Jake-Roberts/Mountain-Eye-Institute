@@ -8,8 +8,10 @@
 
     .img-wrapper {
       width: 50%;
+      overflow: hidden;
 
       img {
+        border-radius: 0.5rem;
         height: auto;
         width: 100%;
       }

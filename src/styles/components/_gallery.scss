@@ -68,10 +68,12 @@
 
     .thumbnail {
       position: absolute;
+
       height: 30rem;
       width: 20rem;
       border-radius: 0.5rem;
       overflow: hidden;
+      border-radius: 0.5rem;
       transition: all 0.5s ease-in-out;
 
       img {
@@ -139,7 +141,7 @@
       }
 
       &.index5 {
-        right: 30rem;
+        right: 22rem;
         bottom: 5%;
         z-index: 2;
 
@@ -162,6 +164,7 @@
 
   .navigation {
     @include center;
+
     bottom: 1rem;
     width: auto;
     padding: 0 1rem;
@@ -169,6 +172,9 @@
     justify-content: right;
     align-items: center;
     border-radius: 0.5rem;
+    cursor: pointer;
+
+    
     z-index: 10;
     background-color: rgba(0, 0, 0, 0.7);
 

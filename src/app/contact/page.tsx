@@ -27,7 +27,7 @@ const Contact = () => {
         </div>
         <ContactUs />
       </main>
-      <Footer contact={false} />
+      <Footer contact={false} tall={false} />
     </>
   );
 };

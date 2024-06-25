@@ -11,20 +11,34 @@ body {
   }
 
   h3 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   h4,
   strong {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 700;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: $color-black;
   }
 
   p,
   a,
   div,
-  span {
-    font-size: 1.5rem;
+  span,
+  strong {
+    font-size: 1.8rem;
+    color: $color-black;
+  }
+
+  a.btn {
+    color: $color-white;
+    font-size: 3rem;
   }
 
   p.cta {
@@ -38,5 +52,6 @@ body {
   button,
   input {
     font-family: "Varela Round", sans-serif;
+    font-size: 2.5rem;
   }
 }

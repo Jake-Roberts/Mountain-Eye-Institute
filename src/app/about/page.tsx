@@ -1,6 +1,8 @@
 import ContactCTA from "@/components/ContactCTA";
 import TopNav from "@/components/TopNav";
 import Footer from "@/components/Footer";
+import TwoColumn from "@/components/TwoColumn";
+import headerImage from "../../../public/gallery/mountain1.webp";
 
 const Contact = () => {
   // only files in app have access to server-side environment variables
@@ -14,9 +16,10 @@ const Contact = () => {
     <>
       <TopNav />
       <main className='main'>
+        <TwoColumn header={true} side={"right"} image={headerImage} />
         <ContactCTA />
       </main>
-      <Footer contact={true} />
+      <Footer contact={true} tall={true} />
     </>
   );
 };

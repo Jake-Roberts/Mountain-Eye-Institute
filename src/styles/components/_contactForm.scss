@@ -1,10 +1,19 @@
 .contact {
   padding: 20px;
   background-color: #242323;
-  border-radius: $default-border-radius;
-  box-shadow: $default-box-shadow;
+  border-radius: $border-radius-default;
+  box-shadow: $box-shadow-default;
   margin: 20px auto;
   max-width: 80%;
+
+  h2,
+  h3,
+  p,
+  a,
+  span,
+  strong {
+    color: $color-white;
+  }
 
   h2 {
     color: $color-white;
@@ -80,8 +89,10 @@
           margin-bottom: 10px;
           padding: 10px;
           border: 1px solid $color-grey-light;
-          border-radius: $default-border-radius;
+          border-radius: $border-radius-default;
           font-size: 1.5rem;
+          background-color: $color-white;
+          color: $color-black;
 
           &:focus {
             outline: none;
@@ -97,7 +108,7 @@
         button {
           padding: 10px 20px;
           border: none;
-          border-radius: $default-border-radius;
+          border-radius: $border-radius-default;
           background-color: $color-primary;
           color: $color-white;
           font-size: 1.8rem;

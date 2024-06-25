@@ -6,6 +6,7 @@ import ContactCTA from "@/components/ContactCTA";
 import TwoColumn from "@/components/TwoColumn";
 import BannerList from "@/components/BannerList";
 import { cataracts, dr, glaucoma, lasik, md } from "../../public/eyes/eyes.js";
+import twoColumnImage from "../../public/gallery/mountain1.webp";
 
 const Home = () => {
   const galleryItems = [
@@ -102,7 +103,7 @@ const Home = () => {
             Cedar City&apos;s Ophthalmology, LASIK Surgery, & Optical Center
           </h2>
         </div>
-        <TwoColumn />
+        <TwoColumn header={false} side={"left"} image={twoColumnImage} />
         <h2>Treatments</h2>
         <BannerList items={bannerlistItems} />
         <a className='btn btn-light' href='/treatments'>
@@ -111,7 +112,7 @@ const Home = () => {
         <DOP type={"round"} />
         <ContactCTA />
       </main>
-      <Footer contact={true} />
+      <Footer contact={true} tall={true} />
     </>
   );
 };
