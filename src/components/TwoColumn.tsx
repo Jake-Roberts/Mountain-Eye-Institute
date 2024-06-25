@@ -1,3 +1,5 @@
+
+import mountain1 from "../../public/gallery/optometry.webp";
 import Image, { StaticImageData } from "next/image";
 
 const TwoColumn = ({
