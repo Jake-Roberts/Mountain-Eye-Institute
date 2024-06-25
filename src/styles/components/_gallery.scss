@@ -1,6 +1,7 @@
 .galleryContainer {
   position: relative;
   width: 100%;
+  max-width: 2000px;
   height: 75vh;
   overflow: hidden;
   display: flex;
@@ -11,43 +12,53 @@
     padding: 5rem;
     width: 80rem;
     top: 50%;
+    left: 2%;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
     transform: translateY(-50%);
     color: white;
     z-index: 10;
-    background-color: rgba(0, 0, 0, 0.699);
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+
+    &.active {
+      opacity: 1;
+    }
 
     h2 {
       font-size: 4rem;
+      margin: 0;
       margin-bottom: 1rem;
-      width: fit-content;
-      
+      text-align: left;
     }
 
     p {
       font-size: 2rem;
-    }
-  }
-
-  .learnMoreButton {
-    display: inline-block;
-    margin-top: 3rem;
-    height: 4rem;
-    padding: 0.5rem 1.5rem;
-    background-color: $color-white;
-    color: $color-grey-dark;
-    border: none;
-    border-radius: 0.3rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
-
-    &:hover {
-      background-color: $color-primary;
-      color:$color-white;
+      text-align: center;
     }
 
-    text-decoration: none;
-  }
+    .learnMoreButton {
+      margin: 0 auto;
+      margin-top: 3rem;
+      height: 4rem;
+      padding: 0.5rem 1.5rem;
+      background-color: $color-white;
+      color: $color-grey-dark;
+      border: none;
+      border-radius: 0.3rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
 
+      &:hover {
+        background-color: $color-primary;
+        color: $color-white;
+      }
+
+      text-decoration: none;
+    }
+  }
 
   .thumbnails {
     position: relative;
@@ -59,6 +70,7 @@
       position: absolute;
       height: 30rem;
       width: 20rem;
+      border-radius: 0.5rem;
       overflow: hidden;
       transition: all 0.5s ease-in-out;
 
@@ -70,21 +82,21 @@
 
       .thumbnailTitle {
         position: absolute;
-        font-size: 2rem;
-        bottom: 2%;
-        padding: .5rem;
-        width: auto;
-        background-color: rgba(0, 0, 0, 0.705);
+        bottom: -15rem;
+        padding: 0.5rem;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
         color: white;
         text-align: center;
+        display: flex;
         justify-content: center;
         align-items: center;
-        opacity: 1;
-       
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
 
-        &.hide {
-          opacity: 0;
-          display: none;
+        p {
+          max-width: 19rem;
+          font-size: 2rem;
         }
       }
 
@@ -108,18 +120,33 @@
         right: -20%;
         bottom: 5%;
         z-index: 0;
+
+        .thumbnailTitle {
+          bottom: 0;
+          opacity: 1;
+        }
       }
 
       &.index4 {
         right: 5rem;
         bottom: 5%;
         z-index: 3;
+
+        .thumbnailTitle {
+          bottom: 0;
+          opacity: 1;
+        }
       }
 
       &.index5 {
         right: 30rem;
         bottom: 5%;
         z-index: 2;
+
+        .thumbnailTitle {
+          bottom: 0;
+          opacity: 1;
+        }
       }
     }
 
@@ -134,16 +161,16 @@
   }
 
   .navigation {
-    position: absolute;
-    bottom:0.2rem;
-    right: 18rem;
+    @include center;
+    bottom: 1rem;
     width: auto;
-    padding: .2rem;
+    padding: 0 1rem;
     display: flex;
     justify-content: right;
     align-items: center;
+    border-radius: 0.5rem;
     z-index: 10;
-    background-color:rgba(0, 0, 0, 0.5); ;
+    background-color: rgba(0, 0, 0, 0.7);
 
     .dots {
       display: flex;

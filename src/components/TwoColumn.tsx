@@ -1,5 +1,5 @@
 import Image from "next/image";
-import mountain1 from "../../public/gallery/mountain1.webp";
+import mountain1 from "../../public/gallery/optometry.webp";
 
 const TwoColumn = () => {
   return (
