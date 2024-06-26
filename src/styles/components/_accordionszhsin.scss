@@ -1,11 +1,18 @@
 .accordion-szhsin {
+  width: 80%;
+  max-width: 2000px;
+
   .szh-accordion {
     border-bottom: 0.2rem solid $color-primary;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
 
     &__item {
       border-top: 0.2rem solid $color-primary;
+
+      &-heading {
+        width: 100%;
+      }
 
       &-btn {
         cursor: pointer;

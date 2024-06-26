@@ -39,6 +39,19 @@ body {
 
 main {
   height: fit-content;
+  max-width: 2400px;
+  margin: auto;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  strong,
+  span,
+  div {
+    max-width: 2000px;
+  }
 }
 
 h1,

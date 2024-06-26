@@ -20,7 +20,14 @@
   width: fit-content;
 }
 
-h2 {
+h2,
+h3 {
+  width: 70%;
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
+.treatments-heading {
   width: fit-content;
   margin: 0 auto;
 }

@@ -1,6 +1,7 @@
 .contact-cta {
   position: relative;
   width: 60%;
+  max-width: 2200px;
   background-color: $color-grey;
   margin: 0 auto -14rem;
   padding: 5rem 10rem;
@@ -12,12 +13,18 @@
     justify-content: space-between;
     align-items: center;
     background-color: $color-white;
-    padding: 2rem 3rem;
+    padding: 5rem 10rem;
     border-radius: $border-radius-round;
     width: 100%;
 
     h2 {
       color: $color-black;
+      width: 50%;
+      margin: 0;
+    }
+
+    a {
+      margin: 0;
     }
   }
 }

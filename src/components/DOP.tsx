@@ -129,7 +129,6 @@ Dr. Olson enjoys doing a variety of activities with his family in beautiful Sout
 
   return (
     <section className='dop component'>
-      <h2>The Best in Southern Utah</h2>
       <div className='directory'>
         {type === "round"
           ? people.length &&

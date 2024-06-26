@@ -2,6 +2,7 @@
   position: relative;
   width: 100%;
   max-width: 2000px;
+  margin: 0 auto;
   height: 75vh;
   overflow: hidden;
   display: flex;
@@ -168,7 +169,7 @@
 
     bottom: 1rem;
     width: auto;
-    padding: 0 1rem;
+    padding: 0.5rem 0.25rem 0.5rem 1rem;
     display: flex;
     justify-content: right;
     align-items: center;
@@ -197,10 +198,10 @@
     }
 
     .arrow {
+      display: flex;
+      align-items: center;
       margin-left: 2rem;
-      font-size: 2rem;
       cursor: pointer;
-      color: white;
       user-select: none;
     }
   }

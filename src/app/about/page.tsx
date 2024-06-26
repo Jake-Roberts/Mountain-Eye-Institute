@@ -5,18 +5,24 @@ import TwoColumn from "@/components/TwoColumn";
 import headerImage from "../../../public/gallery/lasik.webp";
 
 const Contact = () => {
-  // only files in app have access to server-side environment variables
-  // for that reason we must pass the .env.local keys as props from here
-  const props = {
-    apiKey: process.env.GOOGLE_MAPS_API_KEY,
-    mapId: process.env.MAP_ID,
-  };
+  const headerText = [
+    "Mountain Eye Institute is where Southern Utah goes for Eye Care!",
+    "About Mountain Eye Institute",
+  ];
+  const bodyText =
+    "Regardless of how old you are, it's important to have an ophthalmologist in Cedar City, UT that you can rely on. Ophthalmology specialists are integral for primary eye care and surgical procedures for your eye health. If you are looking for quality eye care, look to Mountain Eye Institute. Our complete ophthalmology practice uses only the most advanced practices and tools. Our board-certified ophthalmologists provide each of our clients with a wide range of optometrist services. Each person on our friendly and skilled team is prepared to bring exceptional eye services to those in Cedar City, UT.";
 
   return (
     <>
       <TopNav />
       <main className='main'>
-        <TwoColumn header={true} side={"right"} image={headerImage} />
+        <TwoColumn
+          header={true}
+          headerText={headerText}
+          side={"right"}
+          image={headerImage}
+          body={bodyText}
+        />
         <ContactCTA />
       </main>
       <Footer contact={true} tall={true} />

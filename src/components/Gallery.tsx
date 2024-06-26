@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React, { act, useState } from "react";
 import Link from "next/link";
-import rightCaret from "../../public/chevron-down.svg";
+import rightCaret from "../../public/chevron-right.svg";
 
 interface GalleryProps {
   items: {
@@ -88,7 +88,7 @@ const Gallery = ({ items }: GalleryProps) => {
       </div>
 
       <div className='navigation'>
-      {/* <div className='arrow' onClick={() => previous()}>
+        {/* <div className='arrow' onClick={() => previous()}>
           <Image src={rightCaret} alt='right arrow' width={50} height={50} />
         </div> */}
         <div className='dots'>
@@ -100,9 +100,8 @@ const Gallery = ({ items }: GalleryProps) => {
           ))}
         </div>
         <div className='arrow' onClick={() => next()}>
-          <Image src={rightCaret} alt='right arrow' width={50} height={50} />
+          <Image src={rightCaret} alt='right arrow' width={25} height={25} />
         </div>
-
       </div>
     </div>
   );
