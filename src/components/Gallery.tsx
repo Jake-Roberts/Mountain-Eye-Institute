@@ -88,6 +88,9 @@ const Gallery = ({ items }: GalleryProps) => {
       </div>
 
       <div className='navigation'>
+      {/* <div className='arrow' onClick={() => previous()}>
+          <Image src={rightCaret} alt='right arrow' width={50} height={50} />
+        </div> */}
         <div className='dots'>
           {items.map((_, index) => (
             <div
