@@ -21,7 +21,13 @@ const Contact = () => {
         <div className='map-and-review'>
           <GoogleMap {...props} />
           <div className='reviews'>
-            <h1>Visit Us!</h1>
+            <div className='visit-us'>
+              <h1>Visit Us!</h1>
+              <p>
+                Our world-class team has the skills and experience to help you
+                with anything - big or small. Come see us today!
+              </p>
+            </div>
             <GReviewCarousel />
           </div>
         </div>
