@@ -7,7 +7,7 @@ const Footer = ({ contact, tall }: { contact: boolean; tall: boolean }) => {
       <div className='attribution'>
         <p className='copyright'>Copyright ©2024 Mountain Eye Institute</p>
         <p>|</p>
-        <a href='www.nextleveltech.com'>Created by Next Level Technologies</a>
+        <a href='www.nextlevelweb.tech'>Created by Next Level Technologies</a>
       </div>
     </footer>
   );
