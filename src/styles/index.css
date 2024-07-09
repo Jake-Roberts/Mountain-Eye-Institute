@@ -23,15 +23,15 @@ ORDER: base + typography > general layout + grid > page layout > components
   margin: 0;
 }
 
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-}
-
-html {
-  font-size: 62.5%;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -225,11 +225,25 @@ body input {
   background-color: transparent;
   border: none;
 }
+@media only screen and (max-width: 56.25em) {
+  .accordion-szhsin .szh-accordion__item-btn {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
 .accordion-szhsin .szh-accordion__item-btn .btn-header {
   margin-left: 3rem;
   display: flex;
   gap: 4rem;
   align-items: center;
+  width: 80%;
+}
+@media only screen and (max-width: 56.25em) {
+  .accordion-szhsin .szh-accordion__item-btn .btn-header {
+    text-align: center;
+    flex-direction: column;
+    gap: 0;
+  }
 }
 .accordion-szhsin .szh-accordion__item-btn .btn-header img {
   filter: invert(0);
@@ -306,6 +320,12 @@ body input {
   align-items: center;
   gap: 2rem;
 }
+@media only screen and (max-width: 56.25em) {
+  .bannerlist ul li.card {
+    padding: 3rem 2rem;
+    flex-direction: column;
+  }
+}
 .bannerlist ul li.card::before, .bannerlist ul li.card::after {
   content: "";
   position: absolute;
@@ -331,6 +351,15 @@ body input {
 .bannerlist ul li.card .info {
   text-align: left;
 }
+@media only screen and (max-width: 56.25em) {
+  .bannerlist ul li.card .info {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+}
 .bannerlist ul li.card .info .title,
 .bannerlist ul li.card .info p {
   color: #fff;
@@ -340,34 +369,49 @@ body input {
   font-weight: 700;
 }
 
-@media (min-width: 30rem) {
-  ul li.card {
-    text-align: left;
-  }
-}
 .contact-cta {
   position: relative;
   width: 60%;
   max-width: 2200px;
   background-color: #a1a1a1;
   margin: 0 auto -14rem;
-  padding: 5rem 10rem;
+  padding: 5rem 5rem;
   z-index: 1;
   border-radius: 0.5rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .contact-cta {
+    width: 95%;
+    padding: 3rem 3rem;
+  }
 }
 .contact-cta .inner-cta {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
-  padding: 5rem 10rem;
+  padding: 5rem 5rem;
   border-radius: 1rem;
   width: 100%;
+}
+@media only screen and (max-width: 56.25em) {
+  .contact-cta .inner-cta {
+    text-align: center;
+    gap: 3rem;
+    padding: 2rem 2rem;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 .contact-cta .inner-cta h2 {
   color: #000;
   width: 50%;
   margin: 0;
+}
+@media only screen and (max-width: 56.25em) {
+  .contact-cta .inner-cta h2 {
+    width: 80%;
+  }
 }
 .contact-cta .inner-cta a {
   margin: 0;
@@ -411,7 +455,21 @@ body input {
   align-items: center;
   text-align: center;
 }
-.contact .contactContainer {
+.contact .contact-details {
+  padding: 2rem;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+@media only screen and (max-width: 56.25em) {
+  .contact .contact-details {
+    margin: 0;
+    margin-top: 2rem;
+    width: 100%;
+    text-align: center;
+  }
+}
+.contact .contact-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -419,46 +477,62 @@ body input {
   width: 80%;
   margin: 0 auto;
 }
-@media (max-width: 768px) {
-  .contact .contactContainer {
+@media only screen and (max-width: 56.25em) {
+  .contact .contact-container {
     flex-direction: column;
     align-items: center;
+    margin: 0;
+    width: 100%;
   }
 }
-.contact .contactContainer .ourInfo,
-.contact .contactContainer .formContainer {
+.contact .contact-container .ourInfo,
+.contact .contact-container .formContainer {
   flex: 1;
   padding: 20px;
   color: #fff;
 }
-.contact .contactContainer .ourInfo h3,
-.contact .contactContainer .formContainer h3 {
+.contact .contact-container .ourInfo h3,
+.contact .contact-container .formContainer h3 {
   text-decoration: underline;
   margin: 0;
 }
-.contact .contactContainer .ourInfo p,
-.contact .contactContainer .formContainer p {
+.contact .contact-container .ourInfo p,
+.contact .contact-container .formContainer p {
   font-size: 1.8rem;
   margin-bottom: 10px;
 }
-@media (max-width: 768px) {
-  .contact .contactContainer .ourInfo,
-  .contact .contactContainer .formContainer {
+@media only screen and (max-width: 56.25em) {
+  .contact .contact-container .ourInfo,
+  .contact .contact-container .formContainer {
     width: 100%;
     text-align: center;
   }
 }
-.contact .contactContainer .ourInfo {
+.contact .contact-container .ourInfo {
   display: flex;
   gap: 1rem;
   flex-direction: column;
 }
-.contact .contactContainer .formContainer form {
+@media only screen and (max-width: 56.25em) {
+  .contact .contact-container .ourInfo {
+    align-items: center;
+    width: 100%;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .contact .contact-container .ourInfo div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.contact .contact-container .formContainer form {
   display: flex;
   flex-direction: column;
 }
-.contact .contactContainer .formContainer form input,
-.contact .contactContainer .formContainer form textarea {
+.contact .contact-container .formContainer form input,
+.contact .contact-container .formContainer form textarea {
   margin-bottom: 10px;
   padding: 10px;
   border: 1px solid #dadada;
@@ -467,16 +541,16 @@ body input {
   background-color: #fff;
   color: #000;
 }
-.contact .contactContainer .formContainer form input:focus,
-.contact .contactContainer .formContainer form textarea:focus {
+.contact .contact-container .formContainer form input:focus,
+.contact .contact-container .formContainer form textarea:focus {
   outline: none;
   border-color: #1e489d;
 }
-.contact .contactContainer .formContainer form textarea {
+.contact .contact-container .formContainer form textarea {
   height: 100px;
   resize: none;
 }
-.contact .contactContainer .formContainer form button {
+.contact .contact-container .formContainer form button {
   padding: 10px 20px;
   border: none;
   border-radius: 0.5rem;
@@ -486,7 +560,7 @@ body input {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-.contact .contactContainer .formContainer form button:hover {
+.contact .contact-container .formContainer form button:hover {
   background-color: #0e2249;
 }
 
@@ -622,18 +696,42 @@ body input {
   overflow-y: scroll;
   padding-top: 6rem;
 }
+@media only screen and (max-width: 56.25em) {
+  .dop .directory .modal {
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+    overflow-y: scroll;
+  }
+}
 .dop .directory .modal.active {
+  position: fixed;
   top: 0;
   right: 0;
   visibility: visible;
   opacity: 1;
 }
+@media only screen and (max-width: 56.25em) {
+  .dop .directory .modal.active {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    height: 100vh;
+    overflow-y: scroll;
+  }
+}
 .dop .directory .modal .modal-content {
   margin: 0 auto;
   width: 80%;
-  display: block;
-  height: -moz-fit-content;
-  height: fit-content;
+}
+@media only screen and (max-width: 56.25em) {
+  .dop .directory .modal .modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 90%;
+  }
 }
 .dop .directory .modal .modal-content .person {
   display: flex;
@@ -897,6 +995,7 @@ body input {
   background-color: #383838;
   padding: 5rem 0;
   width: 100%;
+  max-width: 2000px;
 }
 .three-column-info.component {
   margin-bottom: 0rem;
@@ -908,9 +1007,15 @@ body input {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  width: 80%;
-  max-width: 2000px;
   margin: 0 auto;
+}
+@media only screen and (max-width: 56.25em) {
+  .three-column-info .info-wrapper {
+    width: 100%;
+    gap: 4rem;
+    align-items: center;
+    flex-direction: column;
+  }
 }
 .three-column-info .info-wrapper .address,
 .three-column-info .info-wrapper .hours,
@@ -963,9 +1068,19 @@ body input {
   width: 90%;
   margin: 5rem auto;
 }
+@media only screen and (max-width: 56.25em) {
+  .two-column .content {
+    flex-direction: column;
+  }
+}
 .two-column .content .img-wrapper {
   width: 50%;
   overflow: hidden;
+}
+@media only screen and (max-width: 56.25em) {
+  .two-column .content .img-wrapper {
+    width: 100%;
+  }
 }
 .two-column .content .img-wrapper img {
   border-radius: 0.5rem;
@@ -976,6 +1091,15 @@ body input {
   width: 50%;
   padding: 2rem;
 }
+@media only screen and (max-width: 56.25em) {
+  .two-column .content .text {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .two-column .content .text h1,
 .two-column .content .text h2 {
   margin: 0;
@@ -984,7 +1108,7 @@ body input {
 footer {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 100vw;
 }
 footer .attribution {
   display: flex;
@@ -1000,10 +1124,10 @@ footer .attribution p,
 footer .attribution a {
   color: #fff;
 }
-@media only screen and (max-width: 37.5em) {
-  footer {
+@media only screen and (max-width: 56.25em) {
+  footer .attribution {
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
   }
 }
 
@@ -1021,8 +1145,18 @@ header .infobar {
 header .infobar a {
   color: #fff;
 }
-header .infobar a .btn {
+header .infobar a.btn {
+  font-size: 1.8rem;
   border: 2px solid #fff;
+  margin: 1rem 0;
+  border-radius: 2rem;
+}
+@media only screen and (max-width: 56.25em) {
+  header .infobar {
+    gap: 1rem;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 }
 header .topnav {
   position: sticky;
@@ -1035,6 +1169,12 @@ header .topnav {
   background-color: #fff;
   z-index: 100;
 }
+@media only screen and (max-width: 56.25em) {
+  header .topnav {
+    height: 8rem;
+    justify-content: space-between;
+  }
+}
 header .topnav a {
   margin: 1rem;
   box-shadow: none;
@@ -1045,17 +1185,39 @@ header .topnav a {
   margin: 0;
   padding: 0;
 }
+header .topnav a.logolink {
+  width: 20%;
+}
+@media only screen and (max-width: 56.25em) {
+  header .topnav a.logolink {
+    width: 50%;
+  }
+}
 header .topnav a img {
   height: 100%;
   width: 100%;
 }
 header .topnav .navlinks {
+  position: initial;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   align-items: center;
-  width: 50%;
   text-align: center;
+  width: 50%;
+  display: block;
+}
+@media only screen and (max-width: 56.25em) {
+  header .topnav .navlinks {
+    position: fixed;
+    top: 15rem;
+    right: -200px;
+    background: rgba(2, 2, 2, 0.9);
+    border-radius: 5px;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    visibility: hidden;
+  }
 }
 header .topnav .navlinks a {
   text-decoration: none;
@@ -1068,6 +1230,67 @@ header .topnav .navlinks a {
 header .topnav .navlinks a:hover {
   color: #1e489d;
   font-weight: 400;
+}
+header .topnav .navlinks.open {
+  opacity: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  right: 10px;
+  visibility: visible;
+}
+header .topnav .navlinks ul {
+  text-align: center;
+  list-style: none;
+  margin: 0;
+  padding: 0 20px;
+}
+header .topnav .navlinks li {
+  margin: 20px 0 40px;
+}
+header .topnav .navlinks li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  width: 100%;
+}
+header .topnav .mobile-nav-toggle {
+  display: none;
+  size: 10px;
+}
+header .topnav .hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 40px;
+  height: 35px;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  /* Transform first line to "X" */
+}
+header .topnav .hamburger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: rgb(14, 13, 13);
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+header .topnav .hamburger.change {
+  /* Hide middle line */
+}
+header .topnav .hamburger.change span:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+header .topnav .hamburger.change span:nth-child(2) {
+  opacity: 0;
+  transform: scale(0); /* Ensures it moves out of sight */
+}
+header .topnav .hamburger.change span:nth-child(3) {
+  transform: rotate(-45deg) translate(9px, -9px);
 }
 header .topnav .contact-btn {
   border: 2px solid #1e489d;
@@ -1090,16 +1313,27 @@ header .topnav .contact-btn {
   width: 80%;
   margin: auto;
 }
+@media only screen and (max-width: 56.25em) {
+  .main .map-and-review {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .main .map-and-review .googlemap {
+    width: 100%;
+    text-align: center;
+  }
+}
 .main .map-and-review .reviews {
   display: flex;
   flex-direction: column;
   width: 45%;
 }
-.main .contact-details {
-  padding: 2rem;
-  margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.2);
-  color: #fff;
+@media only screen and (max-width: 56.25em) {
+  .main .map-and-review .reviews {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .logo {
@@ -1116,6 +1350,13 @@ header .topnav .contact-btn {
 .heading h1,
 .heading h2 {
   margin-left: 10rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .heading h1,
+  .heading h2 {
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 
 .btn {
