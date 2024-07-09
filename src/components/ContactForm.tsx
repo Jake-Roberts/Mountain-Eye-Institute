@@ -21,7 +21,7 @@ const ContactUs = () => {
           </Link>
         </strong>
       </div>
-      <div className='contactContainer'>
+      <div className='contact-container'>
         <div className='ourInfo'>
           <div>
             <h3>Address</h3>{" "}

@@ -4,23 +4,40 @@
   max-width: 2200px;
   background-color: $color-grey;
   margin: 0 auto -14rem;
-  padding: 5rem 10rem;
+  padding: 5rem 5rem;
   z-index: 1;
   border-radius: $border-radius-default;
+
+  @include respond(tab-port) {
+    width: 95%;
+    padding: 3rem 3rem;
+  }
 
   .inner-cta {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: $color-white;
-    padding: 5rem 10rem;
+    padding: 5rem 5rem;
     border-radius: $border-radius-round;
     width: 100%;
+
+    @include respond(tab-port) {
+      text-align: center;
+      gap: 3rem;
+      padding: 2rem 2rem;
+      flex-direction: column;
+      justify-content: center;
+    }
 
     h2 {
       color: $color-black;
       width: 50%;
       margin: 0;
+
+      @include respond(tab-port) {
+        width: 80%;
+      }
     }
 
     a {

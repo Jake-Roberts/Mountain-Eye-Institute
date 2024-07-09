@@ -31,6 +31,11 @@
       align-items: center;
       gap: 2rem;
 
+      @include respond(tab-port) {
+        padding: 3rem 2rem;
+        flex-direction: column;
+      }
+
       &::before,
       &::after {
         content: "";
@@ -67,6 +72,14 @@
       .info {
         text-align: left;
 
+        @include respond(tab-port) {
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 3rem;
+        }
+
         .title,
         p {
           color: $color-white;
@@ -78,11 +91,5 @@
         }
       }
     }
-  }
-}
-
-@media (min-width: 30rem) {
-  ul li.card {
-    text-align: left;
   }
 }

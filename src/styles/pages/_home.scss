@@ -12,6 +12,11 @@
   h1,
   h2 {
     margin-left: 10rem;
+
+    @include respond(tab-port) {
+      margin: 0 auto;
+      text-align: center;
+    }
   }
 }
 

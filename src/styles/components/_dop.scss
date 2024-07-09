@@ -159,7 +159,13 @@
       opacity: 0;
       overflow-x: hidden;
       overflow-y: scroll;
-      padding-top: 6rem;
+      padding-top: 2rem;
+
+      @include respond(tab-port) {
+        height: fit-content;
+        width: 100%;
+        overflow-y: scroll;
+      }
 
       &.active {
         // position variables for right-entry modal
@@ -167,13 +173,26 @@
         right: 0;
         visibility: visible;
         opacity: 1;
+
+        @include respond(tab-port) {
+          @include fixedCenter;
+          top: 0;
+          height: 100vh;
+          overflow-y: scroll;
+        }
       }
 
       .modal-content {
         margin: 0 auto;
+        height: 100%;
         width: 80%;
-        display: block;
-        height: fit-content;
+
+        @include respond(tab-port) {
+          display: flex;
+          flex-direction: column;
+          gap: 3rem;
+          width: 90%;
+        }
 
         .person {
           display: flex;

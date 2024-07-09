@@ -29,11 +29,23 @@
         background-color: transparent;
         border: none;
 
+        @include respond(tab-port) {
+          height: fit-content;
+        }
+
         .btn-header {
           margin-left: 3rem;
           display: flex;
           gap: 4rem;
           align-items: center;
+          width: 80%;
+
+          @include respond(tab-port) {
+            text-align: center;
+            flex-direction: column;
+            gap: 0;
+          }
+
           img {
             filter: invert(0);
           }
