@@ -40,23 +40,23 @@ ORDER: base + typography > general layout + grid > page layout > components
 
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
-    @media only screen and (max-width: 45rem) {
+    @media only screen and (max-width: 37.5em) {
       @content;
     } //600px
   }
   @if $breakpoint == tab-port {
-    @media only screen and (max-width: 76.8rem) {
+    @media only screen and (max-width: 56.25em) {
       @content;
-    } //768px
+    } //900px
   }
   @if $breakpoint == tab-land {
-    @media only screen and (max-width: 102.4rem) {
-      @content;
-    } //1024px
-  }
-  @if $breakpoint == desktop {
-    @media only screen and (min-width: 120rem) {
+    @media only screen and (max-width: 75em) {
       @content;
     } //1200px
+  }
+  @if $breakpoint == desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    } //1800px
   }
 }

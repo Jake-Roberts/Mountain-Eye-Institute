@@ -2,26 +2,16 @@
 import Image from "next/image";
 import logo from "../../public/logo.webp";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-const TopNav = () => {
-  const [viewportWidth, setViewportWidth] = useState<number>(4500);
+const TopNav = ({ viewportWidth }: { viewportWidth: number }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-
-  useEffect(() => {
-    console.log("useEffect ran");
-    setViewportWidth(window.innerWidth);
-  }, []);
-
-  useEffect(() => {
-    console.log(viewportWidth);
-  }, [viewportWidth]);
 
   return (
     <header>
       <div className='infobar'>
         <a href='tel:4355861131'>(435) 586-1131</a>
-        {viewportWidth <= 768 ? (
+        {viewportWidth <= 900 ? (
           <a className='btn' href='https://goo.gl/maps/vW9DfknEoBU2'>
             Map
           </a>
@@ -33,7 +23,7 @@ const TopNav = () => {
         <Link href='/' className='logolink'>
           <Image src={logo} alt='company logo' width={535} height={156} />
         </Link>
-        {viewportWidth <= 768 ? (
+        {viewportWidth <= 900 ? (
           <>
             <nav className={`navlinks ${isOpen ? "open" : ""}`}>
               <ul>

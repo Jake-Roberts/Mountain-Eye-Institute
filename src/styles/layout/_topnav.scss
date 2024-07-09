@@ -20,7 +20,7 @@ header {
       }
     }
 
-    @include respond(tab-land) {
+    @include respond(tab-port) {
       gap: 1rem;
       justify-content: space-evenly;
       align-items: center;
@@ -38,13 +38,9 @@ header {
     background-color: $color-white;
     z-index: 100;
 
-    @include respond(tab-land) {
+    @include respond(tab-port) {
       height: 8rem;
       justify-content: space-between;
-
-      .logolink {
-        width: 50%;
-      }
     }
 
     a {
@@ -56,6 +52,14 @@ header {
       margin: 0;
       padding: 0;
 
+      &.logolink {
+        width: 20%;
+
+        @include respond(tab-port) {
+          width: 50%;
+        }
+      }
+
       img {
         height: 100%;
         width: 100%;
@@ -63,14 +67,15 @@ header {
     }
 
     .navlinks {
+      position: initial;
       display: flex;
       justify-content: space-evenly;
       flex-wrap: wrap;
       align-items: center;
-      width: 50%;
       text-align: center;
+      width: 50%;
 
-      @include respond(tab-land) {
+      @include respond(tab-port) {
         position: absolute;
         top: 90px;
         right: -200px;
