@@ -99,7 +99,7 @@ const Home = () => {
       sneakpeak: "Optical Center",
       title: "Optical Center",
       description:
-        "Our Certified Optician, Dr. Joseph Godwin, has the expertise to provide you with the correct prescription and the correct frames for all ages.",
+        "Our Certified Optician, Joseph Godwin, has the expertise to provide you with the correct prescription and the correct frames for all ages.",
     },
     {
       image: "/gallery/lasik.webp",
@@ -255,7 +255,7 @@ const Home = () => {
     },
     {
       image: godwin,
-      alt: "Dr. Godwin",
+      alt: "Joseph Godwin",
       fname: "Joseph",
       lname: "Godwin",
       title: "ABOC",
