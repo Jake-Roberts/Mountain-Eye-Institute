@@ -70,10 +70,6 @@ const Home = () => {
   // const [viewportWidth, setViewportWidth] = useState<number>(useWindowSize());
   const viewportWidth = useWidth();
 
-  useEffect(() => {
-    console.log(viewportWidth);
-  }, [viewportWidth]);
-
   // useEffect(() => {
   //   window.addEventListener("resize", () => {
   //     setViewportWidth(window.innerWidth);
@@ -305,7 +301,7 @@ const Home = () => {
 
   return (
     <>
-      <TopNav viewportWidth={viewportWidth} />
+      <TopNav />
       <main className='main'>
         {viewportWidth > 900 && <Gallery items={galleryItems} />}
         <div className='heading'>

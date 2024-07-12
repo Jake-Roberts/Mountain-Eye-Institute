@@ -12,7 +12,7 @@ import logo from "../../public/logo.webp";
 // import markerIcon from '../assets/markericon.png'
 
 const centerPosition = { lat: 37.657233, lng: -113.085504 };
-// 10.5 is the Salt Lake Valley, 15 is neighborhood or freeway exit
+// 10.5 is the entire Salt Lake Valley, 15 is neighborhood- or freeway-exit-size
 const defaultZoom = 15;
 
 // use https://www.gps-coordinates.net/ to convert addresses to coordinates for input below
@@ -20,8 +20,8 @@ const propertyCoordinates = [
   { lat: 37.657233, lng: -113.085504 }, // Mountain Eye Institute Cedar City
 ];
 
-const GoogleMap = ({ apiKey, mapId }: { apiKey: string; mapId: string }) => {
-  if (propertyCoordinates?.length && apiKey) {
+const GoogleMap = ({ apiKey, mapId }: { apiKey: string | undefined; mapId: string | undefined }) => {
+  if (propertyCoordinates?.length && apiKey && mapId) {
     return (
       <div className='googlemap component'>
         <div id='map'>
@@ -34,7 +34,7 @@ const GoogleMap = ({ apiKey, mapId }: { apiKey: string; mapId: string }) => {
         </div>
       </div>
     );
-  } else return <p className='googlemap component'>Loading...</p>;
+  } else return <div className='googlemap component'>Loading...</div>;
 };
 
 const ControlledMap = ({
